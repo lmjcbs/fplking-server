@@ -1,4 +1,5 @@
 import { __prod__ } from './constants';
+import { User } from './entities/User';
 import { League } from './entities/League';
 import { MikroORM } from '@mikro-orm/core';
 import path from 'path';
@@ -8,7 +9,7 @@ export default {
         path: path.join(__dirname, './migrations'),
         pattern: /^[\w-]+\d+\.[tj]s$/,
     },
-    entities: [League],
+    entities: [User, League],
     dbName: 'fplking',
     type: 'postgresql',
     debug: !__prod__,
