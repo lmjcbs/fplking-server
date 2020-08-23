@@ -22,8 +22,4 @@ export class User {
 
     @Property({ type: 'text' })
     password!: string;
-
-    @Field()
-    @Property({ type: 'number' })
-    playerIdCode!: number;
 }
